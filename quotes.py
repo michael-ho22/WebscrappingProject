@@ -102,8 +102,10 @@ for page in range(1,11):
 # print(author_count)
 # sorted_authors = sorted(author_count.items(), key = lambda x:x[1], reverse=True)
 # print(sorted_authors)
+sorted_authors = dict(sorted(author_count.items(), key = lambda x:x[1], reverse=True))
 print('                               AUTHOR STATS                                 ')
 print('--------------------------------------------------------------------------\n')
+print(f'{sorted_authors}\n')
 print(f'{author_most_quotes} has the most quotes with {most_quotes} quotes.\n')
 print(f"{str(minimum)[1:-1]} have the least quotes with {least_quotes} quotes.\n")
 print('--------------------------------------------------------------------------\n\n\n')
@@ -141,7 +143,7 @@ print('-------------------------------------------------------------------------
 
 
 ## DATA VISUALIZATION ##
-sorted_authors = dict(sorted(author_count.items(), key = lambda x:x[1], reverse=True))
+# sorted_authors = dict(sorted(author_count.items(), key = lambda x:x[1], reverse=True))
 # print(sorted_authors)
 
 out = dict(list(sorted_authors.items())[0: 10])
